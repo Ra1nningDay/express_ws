@@ -10,7 +10,7 @@ const getTasks = async (req, res) => {
 };
 
 const addTask = async (req, res) => {
-    const name = req.body;
+    const { name } = req.body;
 
     if (!name) return res.json({ message: "Task is required" });
 
@@ -52,4 +52,4 @@ const deleteTask = async (req, res) => {
     }
 };
 
-export default [getTasks, addTask, updateTask, deleteTask];
+export default { getTasks, addTask, updateTask, deleteTask };
