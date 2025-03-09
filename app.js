@@ -3,9 +3,7 @@ import taskRouter from "./routes/task.js";
 
 const app = express();
 
-app.get("/", (req, res) => {
-    res.send("Test");
-});
+app.use(express.json());
 
 app.use(taskRouter);
 
